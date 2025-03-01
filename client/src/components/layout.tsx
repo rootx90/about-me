@@ -6,9 +6,11 @@ interface LayoutProps {
 
 export function Layout({ children }: LayoutProps) {
   return (
-    <div className="flex min-h-screen">
-      <Sidebar />
-      <main className="flex-1 p-8 bg-background">
+    <div className="flex flex-col md:flex-row min-h-screen">
+      <div className="w-full md:w-64 md:min-h-screen">
+        <Sidebar />
+      </div>
+      <main className="flex-1 p-4 md:p-8 bg-background">
         {children}
       </main>
     </div>
